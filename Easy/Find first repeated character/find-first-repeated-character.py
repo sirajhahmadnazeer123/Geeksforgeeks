@@ -2,13 +2,15 @@
 
 class Solution:
     def firstRepChar(self, s):
-        p=[]
+        g={}
         for i in s:
-            if i in p:
-                return(i)
+            if i in g:
+                g[i]+=1
+                if g[i]==2:
+                    return i
             else:
-                p.append(i)
-        return(-1)
+                    g[i]=1
+        return -1
 
 
 #{ 
