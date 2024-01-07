@@ -1,15 +1,20 @@
 #User function Template for python3
 
-class Solution:
-    def firstRepChar(self, s):
+def nonrepeatingCharacter(self,s):
+        #code here
         g={}
+        c=[]
         for i in s:
             if i in g:
                 g[i]+=1
-                if g[i]==2:
-                    return i
             else:
-                    g[i]=1
+                g[i]=1
+        for i in g:
+            if g[i]==1:
+                c.append(i)
+        for i in s:
+            if g[i]==1:
+                return i
         return -1
 
 
