@@ -9,18 +9,17 @@ class Solution:
     #Function to sort an array according to the other array.
     def relativeSort (self,A1, N, A2, M):
         # Your Code Here
-        c = Counter(A1)
-        s = set(A1)
-        ans = []
+        d=Counter(A1)
+        c=[]
+        f=[]
+        s=set(d)
         for i in A2:
-            if i in s:
-                ans+=[i]*c[i]
+            if i in d:
+                c+=[i]*d[i]
                 s.remove(i)
-                
         for i in sorted(list(s)):
-            ans+=[i]*c[i]
-            
-        return ans
+            c+=[i]*d[i]
+        return c
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
