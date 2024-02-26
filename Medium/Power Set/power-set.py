@@ -1,25 +1,25 @@
 #User function Template for python3
 
 class Solution:
-    def AllPossibleStrings(self, s):
-        # Code here
-        n = len(s)
-        ans = []
-        
-        for i in range(1<<n):
-            v = []
-            for j in range(n):
-                if ((1<<j)&i):
-                    v.append(s[j])
-            k = "".join(v)
-            if k:
-                ans.append(k)
-            
-        ans.sort()
-        return ans
+	def AllPossibleStrings(self, s):
+		# Code here
+		res = []
+		
+		def solve(st, i):
+		    if i == len(s):
+		        return
+		    
+		    res.append(st+s[i])
+		    
+		    solve(st+s[i], i+1)
+		    solve(st, i+1)
+	    
+	    solve("", 0)
+	    return sorted(res)
 
 #{ 
  # Driver Code Starts
+
 #Initial Template for Python 3
 
 if __name__ == '__main__':
