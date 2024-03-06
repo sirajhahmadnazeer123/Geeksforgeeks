@@ -1,5 +1,7 @@
 #User function Template for python3
 
+#User function Template for python3
+
 class Solution:
     def search(self, pat, text):
         # code here
@@ -31,6 +33,8 @@ class Solution:
                 c.append(i-len(pat)+1)
         return c
         
+
+
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
