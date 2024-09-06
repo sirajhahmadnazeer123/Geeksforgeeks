@@ -15,6 +15,7 @@ class Solution:
                 cur=0
         return min_f
 
+
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
